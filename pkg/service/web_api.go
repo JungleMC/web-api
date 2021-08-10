@@ -1,13 +1,11 @@
 package service
 
 import (
-	"context"
 	"fmt"
 	"github.com/JungleMC/web-api/internal/config"
 	"github.com/caarlos0/env"
 	"github.com/go-redis/redis/v8"
 	"github.com/gorilla/mux"
-	"github.com/hellofresh/health-go/v4"
 	"log"
 	"net/http"
 	"time"

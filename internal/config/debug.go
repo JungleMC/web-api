@@ -7,8 +7,12 @@ type Config struct {
 	Verbose   bool `env:"VERBOSE" envDefault:"true"`
 
 	// Address for publishing the API
-	ApiHost   string `env:"API_HOST" envDefault:"127.0.0.1"`
-	ApiPort   int `env:"API_PORT" envDefault:"3000"`
+	ApiHost string `env:"API_HOST" envDefault:"127.0.0.1"`
+	ApiPort int    `env:"API_PORT" envDefault:"3000"`
+
+	// Timeouts (in seconds)
+	ApiReadTimeout    int `env:"API_READ_TIMEOUT" envDefault:"15"`
+	ApiWriteTimeout   int `env:"API_WRITE_TIMEOUT" envDefault:"15"`
 
 	// Redis
 	RedisHost string `env:"REDIS_HOST" envDefault:"127.0.0.1"`
